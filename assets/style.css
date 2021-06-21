@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+}
+
+:root {
+    --nav-color: #31343D; 
+    --highlight: #92CCCE;
+    --heading: #445877;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.75;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--heading);
+}
+
+p {
+    margin: 0;
+}
+
+header {
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--nav-color);
+}
+
+header h1 {
+    color: var(--nav-color);
+    background-color: var(--highlight);
+    padding: 5px 1% 5px 6%;
+    font-size: 200%;
+    margin-left: -2%;
+}
+
+li {
+    list-style: none;
+    display: inline;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 10px;
+    color: var(--highlight);
+    background-image: linear-gradient(280deg, var(--highlight), var(--highlight));
+    background-repeat: no-repeat;
+    background-size: 100% .2em;
+    background-position: bottom;
+    font-size: 1.2rem;
+    transition: all .25s ease-in-out;
+}
+
+nav a:hover {
+    background-size: 100% 100%;
+    color: var(--nav-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 90%;
+}
+
+.content-box {
+    display: flex;
+    justify-content: flex-end;
+    flex: 2;
+    /* margin to offset heading margin */
+    margin: 4% 10% 1% -20%;
+    border-left: 5px solid var(--heading);
+    padding-left: 3%;
+    align-items: center;
+    
+}
+
+.content-box-work {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 2;
+    /* margin to offset heading margin */
+    margin: 4% 10% 1% -20%;
+    border-left: 5px solid var(--heading);
+    padding-left: 3%;
+    
+    
+}
+
+.contact-options {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    /* margin to offset heading margin */
+    margin: 4% 10% 1% -20%;
+    border-left: 5px solid var(--heading);
+    padding-left: 3%;
+    
+}
+
+.contact-options ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 100%;
+}
+
+.contact-options ul li a {
+    text-decoration: none;
+    color: black;
+    border-bottom: 4px solid var(--heading);
+    padding-bottom: .5rem;
+}
+
+
+.left-heading {
+    margin-top: 4%;
+    margin-left: 10%;
+    flex: 1;
+    justify-content: flex-start;
+    /* border-right: 5px solid var(--heading); */
+}
+
+
+.hero-banner {
+    background-image: url(./banner.jpg);
+    background-position-y: 80%;
+    background-size:cover;
+    height: 20rem;
+    min-width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.hero-banner h2 {
+    color: var(--nav-color);
+    background-color: var(--highlight);
+    padding: 8px;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.project1 {
+    display: flex;
+    flex: 2 0 100%;
+    justify-content: center;
+    border: 5px solid var(--highlight);
+    background-size:cover;
+    /* background-image: url(./Fire\ Scripts\ CLI\ Splash.png); */
+    height: 70vh;
+    position: relative;
+    margin-bottom:2%;
+}
+
+.project2 {
+    display: flex;
+    flex: 1 0 50%;
+    justify-content: center;
+    border: 5px solid var(--highlight);
+    background-size:cover;
+    /* background-image: url(./Fire\ Scripts\ CLI\ Splash.png); */
+    height: 25vh;
+    position: relative;
+    margin-bottom:2%;
+}
+
+.project3 {
+    display: flex;
+    flex: 1 0 50%;
+    justify-content: center;
+    border: 5px solid var(--highlight);
+    background-size:cover;
+    /* background-image: url(./Fire\ Scripts\ CLI\ Splash.png); */
+    height: 25vh;
+    position: relative;
+    margin-bottom:2%;
+}
+.project4 {
+    display: flex;
+    flex: 1 0 50%;
+    justify-content: center;
+    border: 5px solid var(--highlight);
+    background-size:cover;
+    /* background-image: url(./Fire\ Scripts\ CLI\ Splash.png); */
+    height: 25vh;
+    position: relative;
+    margin-bottom:2%;
+}
+.project5 {
+    display: flex;
+    flex: 1 0 50%;
+    justify-content: center;
+    border: 5px solid var(--highlight);
+    background-size:cover;
+    /* background-image: url(./Fire\ Scripts\ CLI\ Splash.png); */
+    height: 25vh;
+    position: relative;
+    margin-bottom:2%;
+}
+
+.project1 img {
+   
+}
+
+/* .vl {
+    margin: 4% 4% 4% 4%;
+    border-right: 5px solid var(--heading);
+} */

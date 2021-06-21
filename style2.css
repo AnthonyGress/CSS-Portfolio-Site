@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left-header {
+    display: flex;
+    flex: 20%;
+    border-right: 5px solid black;
+}
+
+.content {
+    display: flex;
+    justify-content: flex-end;
+    flex: 80%;
+}
