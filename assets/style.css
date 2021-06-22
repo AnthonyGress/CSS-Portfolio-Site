@@ -286,7 +286,7 @@ nav a:hover {
   margin-bottom: 1rem;
 }
 
-#contact h3{
+#contact h3 {
   margin-left: -1.5rem;
 }
 /* contact options container  */
@@ -341,7 +341,7 @@ nav a:hover {
 }
 
 @keyframes slideinright {
-  from{
+  from {
     opacity: 0;
     transform: translateX(100%);
   }
@@ -354,19 +354,23 @@ nav a:hover {
 /* set animations to classes */
 .slideinleft {
   opacity: 0;
-    animation: slideinleft 1.5s 0s 1 normal forwards;
-    }
+  animation: slideinleft 1.5s 0s 1 normal forwards;
+}
 .slideinright {
-      opacity: 0;
-      animation: slideinright 1.5s 1.75s 1 normal forwards;
-      }
+  opacity: 0;
+  animation: slideinright 1.5s 1.75s 1 normal forwards;
+}
 
 /* small screen size/mobile media query */
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
+  nav a:hover {
+    background-size: 100% 80%;
+  }
+
   .container {
     flex-direction: column;
   }
-  .left-heading{
+  .left-heading {
     border-bottom: 5px solid var(--heading);
     border-right: none;
   }
@@ -385,11 +389,12 @@ nav a:hover {
     width: 90vw;
   }
 
-  .project2, .project4 {
+  .project2,
+  .project4 {
     margin-right: 0px;
   }
 
-  .contact-options ul{
+  .contact-options ul {
     flex-direction: column;
     align-items: center;
     width: 90vw;
@@ -399,7 +404,5 @@ nav a:hover {
     margin-left: 0px;
   }
 
-  nav a:hover {
-    background-size: 100% 80%;
-  }
+
 }
