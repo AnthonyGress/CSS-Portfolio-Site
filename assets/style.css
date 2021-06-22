@@ -366,18 +366,22 @@ nav a:hover {
   nav a:hover {
     background-size: 100% 80%;
   }
-
+  /* change row containers to column  */
   .container {
     flex-direction: column;
   }
+
+  /* hide right line divider and add the divider to the bottom */
   .left-heading {
     border-bottom: 5px solid var(--heading);
     border-right: none;
   }
+  /* center headings in col layout */
   .left-heading h3 {
     text-align: center;
   }
 
+  /* change row containers to column */
   .content-box {
     flex-direction: column;
     margin-right: 2%;
@@ -394,6 +398,7 @@ nav a:hover {
     margin-right: 0px;
   }
 
+  /* change row containers to column */
   .contact-options ul {
     flex-direction: column;
     align-items: center;
