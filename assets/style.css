@@ -1,25 +1,26 @@
+/* set fonts and box sizing to make life easier */
 * {
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
+/* smooth scroll on supported browsers */
 html {
   scroll-behavior: smooth;
 }
-
+/* reusable color values */
 :root {
   --nav-color: #31343d;
   --highlight: #92ccce;
   --heading: #445877;
 }
-
+/* psuedo reset  */
 body {
   margin: 0;
   padding: 0;
   line-height: 1.75;
 }
-
+/* psuedo reset  */
 h1,
 h2,
 h3,
@@ -34,14 +35,17 @@ h3 {
   color: var(--heading);
 }
 
+/* psuedo reset  */
 p {
   margin: 0;
 }
 
+/* make links clickable without the decoration/underline/color */
 a {
   text-decoration: none;
 }
 
+/* define header flex row container push nav to right and my name to left */
 header {
   padding: 15px 15px;
   display: flex;
@@ -52,6 +56,7 @@ header {
   background-color: var(--nav-color);
 }
 
+/* set my name colors and font size */
 header h1 {
   color: var(--nav-color);
   background-color: var(--highlight);
@@ -60,17 +65,20 @@ header h1 {
   margin-left: -2%;
 }
 
+/* make li elements inline and hide decoration */
 li {
   list-style: none;
   display: inline;
 }
 
+/* make navbar horizontal */
 nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+/* navbar underline/colors and set up for fill on hover animation */
 nav a {
   text-decoration: none;
   padding: 10px;
@@ -85,97 +93,13 @@ nav a {
   -webkit-animation: all 0.35s ease-in-out;
 }
 
+/* hover animation grows background box to full height */
 nav a:hover {
   background-size: 100% 100%;
   color: var(--nav-color);
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  /* justify-content: space-between; */
-  width: 100%;
-}
-
-.content-box {
-  flex: 0 0 77%;
-  justify-content: space-between;
-  padding-left: 6%;
-  margin-right: 15%;
-  margin-top: 4%;
-}
-
-.content-box-work {
-  flex: 0 0 77%;
-  display: flex;
-  flex-wrap: wrap;
-  width: 80vw;
-  margin-top: 2%;
-  margin-left: 5%;
-  /* margin to offset heading margin */
-}
-
-.contact-options {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-content: center;
-  width: 100%;
-  /* margin to offset heading margin */
-}
-
-.contact-options ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
-
-.contact-options ul li {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 2rem;
-}
-
-.contact-options ul li a {
-  text-decoration: none;
-  color: black;
-  /* border-bottom: 4px solid var(--heading); */
-  padding: 10px;
-  background-image: linear-gradient(280deg, var(--heading), var(--heading));
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100% 0.2em;
-  transition: all 0.25s ease-in-out;
-}
-
-.contact-options ul li a:hover {
-  background-size: 100% 100%;
-  color: white;
-}
-
-.left-heading {
-  margin-top: 5%;
-  border-right: 5px solid var(--heading);
-  flex: 0 0 15%;
-}
-
-.left-heading h3 {
-  /* border-right: 5px solid var(--heading); */
-  /* flex: 0 0 20%; */
-  padding-right: 15px;
-  text-align: right;
-}
-
-.page-wrapper {
-  display: flex;
-  max-width: 88%;
-  margin-left: auto;
-  margin-right: auto;
-  flex-wrap: wrap;
-}
-
+/* hero background image and flex container  */
 .hero-banner {
   background-image: url(./img/banner.jpg);
   background-position-y: 80%;
@@ -186,6 +110,7 @@ nav a:hover {
   display: flex;
 }
 
+/* hero subtitle styling over the image and in the bottom right  */
 .hero-banner h2 {
   color: var(--nav-color);
   background-color: var(--highlight);
@@ -196,7 +121,57 @@ nav a:hover {
   display: flex;
   align-items: flex-end;
 }
+/* main page wrapper makes the content all inside of a flex box for responsiveness and set width for safe viewing. */
+.page-wrapper {
+  display: flex;
+  max-width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+}
 
+/* reusable flex row container  */
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* justify-content: space-between; */
+  width: 100%;
+}
+
+/* reusable heading on the left with the colored dividing line on the right */
+.left-heading {
+  margin-top: 5%;
+  border-right: 5px solid var(--heading);
+  flex: 0 0 15%;
+}
+/* make heading flex item 20% of flex container */
+.left-heading h3 {
+  /* border-right: 5px solid var(--heading); */
+  flex: 0 0 20%;
+  padding-right: 15px;
+  text-align: right;
+}
+
+/* about me container  */
+.content-box {
+  flex: 0 0 77%;
+  padding-left: 6%;
+  margin-right: 10%;
+  margin-top: 4%;
+}
+/* work/projects main container  */
+.content-box-work {
+  flex: 0 0 77%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin-top: 2%;
+  margin-left: 5%;
+  /* margin to offset heading margin */
+}
+
+/* set project colors, position, hover anim, and description box values below  */
 .project-banner1 {
   height: fit-content;
   width: fit-content;
@@ -303,8 +278,57 @@ nav a:hover {
   margin-bottom: 2%;
   transition: all 0.25s ease-in-out;
 }
+/* end projects styling */
 
+/* contact heading margin/padding */
+#contact {
+  padding-bottom: 2%;
+  margin-bottom: 1rem;
+}
 
+#contact h3{
+  margin-left: -1.5rem;
+}
+/* contact options container  */
+.contact-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  width: 90%;
+  /* margin to offset heading margin */
+}
+
+.contact-options ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-options ul li {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+/* make the contact options have the underline and set up for hover anim */
+.contact-options ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  background-image: linear-gradient(280deg, var(--heading), var(--heading));
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 0.2em;
+  transition: all 0.25s ease-in-out;
+}
+/* hover on contact options anim */
+.contact-options ul li a:hover {
+  background-size: 100% 100%;
+  color: white;
+}
+
+/* define animations */
 @keyframes slideinleft {
   from {
     opacity: 0;
@@ -327,6 +351,7 @@ nav a:hover {
   }
 }
 
+/* set animations to classes */
 .slideinleft {
   opacity: 0;
     animation: slideinleft 1.5s 0s 1 normal forwards;
@@ -336,7 +361,45 @@ nav a:hover {
       animation: slideinright 1.5s 1.75s 1 normal forwards;
       }
 
-#contact {
-  padding-bottom: 2%;
-  margin-bottom: 1rem;
+/* small screen size/mobile media query */
+@media screen and (max-width:768px) {
+  .container {
+    flex-direction: column;
+  }
+  .left-heading{
+    border-bottom: 5px solid var(--heading);
+    border-right: none;
+  }
+  .left-heading h3 {
+    text-align: center;
+  }
+
+  .content-box {
+    flex-direction: column;
+    margin-right: 2%;
+  }
+
+  .content-box-work {
+    flex-direction: column;
+    margin-left: auto;
+    width: 90vw;
+  }
+
+  .project2, .project4 {
+    margin-right: 0px;
+  }
+
+  .contact-options ul{
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+  }
+
+  #contact h3 {
+    margin-left: 0px;
+  }
+
+  nav a:hover {
+    background-size: 100% 80%;
+  }
 }

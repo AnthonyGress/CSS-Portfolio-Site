@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- fit cover makes the page look good on fullscreen apple devices i.e newer iphones -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" viewport-fit=cover>
+    <!-- add link to an icon that i made, looks better than nothing -->
     <link rel="shortcut icon" href="./apple-touch-icon-240x240.png" />
     <link rel="apple-touch-icon" sizes="240x240" href="./apple-touch-icon-240x240.png" />
+    <!-- pull in my css file -->
     <link rel="stylesheet" href="./assets/style.css">
     <title>Anthony Gress // Portfolio</title>
 </head>
-<!-- TODO
-
-add comments / refactor
-mobile view
-links to projects
-
-
-
--->
+<!-- Allow mobile touch events in body for hover effect to work-->
 <body ontouchstart="">
+    <!-- Added id's to make the navbar auto scroll on click -->
     <header id="home">
+        <!-- slide in animations for the hero -->
         <h1 class="slideinleft">Anthony Gress</h1>
         <nav>
             <a href="#home">Home</a>
             <a href="#about-me">About Me</a>
             <a href="#work">Work</a>
-            <a href="#resume">Resume</a>
+            <!-- <a href="#resume">Resume</a> -->
             <a href="#contact">Contact</a>
         </nav>
     </header>
+    <!-- Hero Section -->
     <section class="hero-banner">
         <div>
+            <!-- slide in opposite direction for subtitle -->
             <h2 class="slideinright">I solve problems and build things</h2>
         </div>
     </section>
+    <!-- Set main content to flex container -->
     <main class="page-wrapper">
+        <!-- container is a reusable flex container -->
         <div class="container">
             <div class="left-heading" id="about-me">
                 <h3>About Me</h3>
@@ -43,14 +44,17 @@ links to projects
                 <p>I have always had a passion for technology. Throughout my life, I have been constantly tinkering with, building, and fixing electronics. I studied Computer Science at the University of Central Florida and have used those skills to solve problems and fix electronics for thousands of people. For the last year I have been providing tech support for 300 Verizon Wireless customers a month. Additionally, I resolved over 85% of their issues that I came into contact with. I obtained my A+ Certification from CompTIA in 2020 and I am continuously growing and furthering my education. As this is a rapidly evolving field, I strive to acquire the latest information pertaining to technology. I have studied network tools/infrastructure, web development, and cybersecurity. I actually built this website from the ground up using HTML, CSS, and Javascript. Check out my portfolio to see other projects that I have been working on lately!</p>
             </div>
         </div>
-        <section class="work-section">
+        <!-- Work/Projects section -->
+        <section>
             <div class="container">
                 <div class="left-heading" id="work">
                     <h3>Work</h3>
                 </div>
                 <div class="content-box-work">
+                    <!-- Wrap the picture of the projects in a tag to make them links, open in new tab -->
                     <a href="https://github.com/techx-guy/Fire-Scripts-CLI" target="_blank" class="project1">
                         <div>
+                                <!-- banner div sits on top of project picture to describe projects -->
                                 <div class="project-banner1">
                                     <h3>Fire Scripts</h3>
                                     <p>Shell/HTML/CSS/JavaScript</p>
@@ -91,12 +95,14 @@ links to projects
                 </div>
             </div>
         </section>
-        <div class="container">
+        <!-- Contact Me section -->
+        <section class="container">
             <div class="left-heading" id="contact">
-                 <h3>Contact</h3>
+                 <h3>Contact Me</h3>
              </div>
+             <!-- flex container for the contact methods -->
             <div class="contact-options">
-                
+                <!-- Make links organized in UL and wrap in a tag to make them do things when clicked -->
                     <ul>
                         <li><a href="#home">555.555.5555</a></li>
                         <li><a href="mailto:tech-guy@opayq.com">tech-guy@opayq.com</a></li>
@@ -105,7 +111,7 @@ links to projects
                     </ul>
                 
             </div>
-        </div>
+        </section>
     </main>
 </body>
 </html>
