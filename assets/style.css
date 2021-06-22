@@ -73,7 +73,8 @@ nav a {
     background-size: 100% .2em;
     background-position: bottom;
     font-size: 1.2rem;
-    transition: all .25s ease-in-out;
+    transition: all .35s ease-in-out;
+    -webkit-animation: all .35s ease-in-out;
 }
 
 nav a:hover {
@@ -84,71 +85,100 @@ nav a:hover {
 .container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    flex-basis: 90%;
+    flex-wrap: nowrap;
+    /* justify-content: space-between; */
+    width: 100%;
 }
 
 .content-box {
-    display: flex;
-    justify-content: flex-end;
-    flex: 2;
-    /* margin to offset heading margin */
-    margin: 4% 10% 1% -20%;
-    border-left: 5px solid var(--heading);
-    padding-left: 3%;
-    align-items: center;
-    
+    flex: 0 0 77%;
+    justify-content: space-between;
+    padding-left: 6%;
+    margin-right: 15%;
+    margin-top: 4%;
 }
 
+
 .content-box-work {
+    flex: 0 0 77%;
     display: flex;
     flex-wrap: wrap;
-    flex: 2;
+    width: 80vw;
+    margin-top: 2%;
+    margin-left: 5%;
     /* margin to offset heading margin */
-    margin: 4% 10% 1% -20%;
-    border-left: 5px solid var(--heading);
-    padding-left: 3%;
     
     
 }
 
 .contact-options {
     display: flex;
-    justify-content: center;
-    flex: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    width:100%;
     /* margin to offset heading margin */
-    margin: 4% 10% 1% -20%;
-    border-left: 5px solid var(--heading);
-    padding-left: 3%;
-    
+
 }
 
 .contact-options ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    flex-basis: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-options ul li {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
 }
 
 .contact-options ul li a {
     text-decoration: none;
     color: black;
-    border-bottom: 4px solid var(--heading);
-    padding-bottom: .5rem;
+    /* border-bottom: 4px solid var(--heading); */
+    padding: 10px;
+    background-image: linear-gradient(280deg, var(--heading), var(--heading));
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% .2em;
+    transition: all .25s ease-in-out;
+
+}
+
+.contact-options ul li a:hover {
+    background-size: 100% 100%;
+    color: white;
 }
 
 
 .left-heading {
-    margin-top: 4%;
-    margin-left: 10%;
-    flex: 1;
-    justify-content: flex-start;
-    /* border-right: 5px solid var(--heading); */
+    margin-top: 5%;
+    border-right: 5px solid var(--heading);
+    flex: 0 0 15%;
+
 }
 
+.left-heading h3 {
+    /* border-right: 5px solid var(--heading); */
+    /* flex: 0 0 20%; */
+    padding-right: 15px;
+    text-align: right;
+    
+}
+
+.page-wrapper {
+    display: flex;
+    max-width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+
+}
 
 .hero-banner {
-    background-image: url(./banner.jpg);
+    background-image: url(./img/banner.jpg);
     background-position-y: 80%;
     background-size:cover;
     height: 20rem;
@@ -168,67 +198,113 @@ nav a:hover {
     align-items: flex-end;
 }
 
-.project1 {
+.project-banner1 {
+    height: fit-content;
+    width: fit-content;
     display: flex;
-    flex: 2 0 100%;
-    justify-content: center;
+    flex-direction: column;
+    margin-top: 40vh;
+    color: var(--nav-color);
+    background-color: var(--highlight);
+}
+
+.project-banner1 h3, .project-banner h3 {
+    color: var(--nav-color);
+    padding-left: .5rem;
+    padding-right: .5rem;    
+}
+
+.project-banner1 p, .project-banner p {
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: .5rem;
+    line-height: 1.1;
+}
+
+.project-banner {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12vh;
+    color: var(--nav-color);
+    background-color: var(--highlight);
+}
+
+.project1:hover, .project2:hover, .project3:hover, .project4:hover, .project5:hover {
+    background-color: var(--highlight);
+    opacity: 85%;
+}
+
+.project1 {
+    flex: 1 0 100%;
+    margin-top: 4%;
     border: 5px solid var(--highlight);
     background-size:cover;
-    /* background-image: url(./Fire\ Scripts\ CLI\ Splash.png); */
-    height: 70vh;
-    position: relative;
+    background-image: url(./img/splash01.jpg);
+    height: 60vh;
     margin-bottom:2%;
+    display: flex;
+    transition: all .25s ease-in-out;
+
 }
 
 .project2 {
-    display: flex;
     flex: 1 0 50%;
-    justify-content: center;
     border: 5px solid var(--highlight);
     background-size:cover;
+    background-image: url(./img/CSS\ Cheatsheet\ Splash.png);
     /* background-image: url(./Fire\ Scripts\ CLI\ Splash.png); */
     height: 25vh;
     position: relative;
     margin-bottom:2%;
+    transition: all .25s ease-in-out;
+
 }
 
 .project3 {
-    display: flex;
+    
     flex: 1 0 50%;
-    justify-content: center;
     border: 5px solid var(--highlight);
+    background-image: url(./img/Simple\ Portfolio.png);
     background-size:cover;
     /* background-image: url(./Fire\ Scripts\ CLI\ Splash.png); */
     height: 25vh;
     position: relative;
     margin-bottom:2%;
+    transition: all .25s ease-in-out;
+
 }
 .project4 {
-    display: flex;
     flex: 1 0 50%;
-    justify-content: center;
     border: 5px solid var(--highlight);
+    background-image: url(./img/Fire\ Scripts\ Big\ Splash.png);
     background-size:cover;
     /* background-image: url(./Fire\ Scripts\ CLI\ Splash.png); */
     height: 25vh;
     position: relative;
     margin-bottom:2%;
+    transition: all .25s ease-in-out;
+
 }
 .project5 {
-    display: flex;
     flex: 1 0 50%;
     justify-content: center;
     border: 5px solid var(--highlight);
+    background-image: url(./img/banner.jpg);
     background-size:cover;
     /* background-image: url(./Fire\ Scripts\ CLI\ Splash.png); */
     height: 25vh;
     position: relative;
     margin-bottom:2%;
+    transition: all .25s ease-in-out;
+
+    }
+
+#contact {
+    padding-bottom: 4%;
 }
 
-.project1 img {
-   
-}
 
 /* .vl {
     margin: 4% 4% 4% 4%;
