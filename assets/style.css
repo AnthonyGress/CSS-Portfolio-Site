@@ -387,6 +387,10 @@ nav a:hover {
     margin-right: 2%;
   }
 
+  #work {
+    margin-top: 1rem;
+  }
+
   .content-box-work {
     flex-direction: column;
     margin-left: auto;
